@@ -1,5 +1,7 @@
 package PrimerPaquete;
 
+import java.util.Objects;
+
 public abstract class Vehiculo implements Acelerar,Frenar,iniciarMarcha{
     private final String marca;
     private final String placa;
@@ -23,4 +25,16 @@ public abstract class Vehiculo implements Acelerar,Frenar,iniciarMarcha{
         return "\nVehiculo: "+getClass().getSimpleName()+"\nMarca: "+getMarca();
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Vehiculo vehiculo = (Vehiculo) o;
+        return Objects.equals(marca, vehiculo.marca) && Objects.equals(placa, vehiculo.placa) && Objects.equals(modelo, vehiculo.modelo);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(marca, placa, modelo);
+    }
 }
