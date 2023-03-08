@@ -1,8 +1,7 @@
 package PrimerPaquete;
-
 import java.util.Objects;
 
-public abstract class Vehiculo implements Acelerar,Frenar,iniciarMarcha{
+public abstract class Vehiculo implements Acelerar,Frenar,iniciarMarcha,Comparable<Vehiculo>{
     private final String marca;
     private final String placa;
     private final String modelo;
@@ -37,4 +36,10 @@ public abstract class Vehiculo implements Acelerar,Frenar,iniciarMarcha{
     public int hashCode() {
         return Objects.hash(marca, placa, modelo);
     }
+
+    @Override
+    public int compareTo(Vehiculo o) {
+        return this.getPlaca().compareTo(o.getPlaca());
+    }
+
 }

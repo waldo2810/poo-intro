@@ -13,6 +13,6 @@ public final class Carro extends Vehiculo{
     }
     @Override
     public String toString(){
-        return super.toString()+" \nColor: "+getColor();
+        return super.toString()+" \nColor: "+getColor()+"\nPlaca: "+getPlaca();
     }
 }
