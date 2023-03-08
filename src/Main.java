@@ -24,10 +24,17 @@ public class Main {
 
         //HASHSET
         HashSet<Vehiculo> vehiculoHashSet = new HashSet<>();
+
+        System.out.println("*---AGREGAR---*");
         vehiculoHashSet.add(ducatti);
         vehiculoHashSet.add(bici);
-
         System.out.println("\nhashset: "+vehiculoHashSet);
+        System.out.println("Cantidad:: "+vehiculoHashSet.size());
+
+        System.out.println("*---ELIMINAR---*");
+        vehiculoHashSet.remove(ducatti);
+        System.out.println("\nhashset: "+vehiculoHashSet);
+        System.out.println("Cantidad:: "+vehiculoHashSet.size());
 
         }
 
