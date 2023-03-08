@@ -18,10 +18,11 @@ public abstract class Vehiculo implements Acelerar,Frenar,iniciarMarcha,Comparab
     public String getModelo(){
         return modelo;
     }
-    public String getPlaca(){return placa;}
+    public String getPlaca(){
+        return placa;}
     @Override
     public String toString(){
-        return "\nVehiculo: "+getClass().getSimpleName()+"\nMarca: "+getMarca();
+        return "\nVehiculo: "+getClass().getSimpleName()+"\nMarca: "+getMarca()+"\nPlaca: "+getPlaca()+"\nModelo: "+getModelo();
     }
 
     @Override
@@ -38,8 +39,8 @@ public abstract class Vehiculo implements Acelerar,Frenar,iniciarMarcha,Comparab
     }
 
     @Override
-    public int compareTo(Vehiculo o) {
-        return o.getPlaca().compareTo(this.getPlaca());
+    public int compareTo(Vehiculo v) {
+        return v.getPlaca().compareTo(this.getPlaca());
     }
 
 }

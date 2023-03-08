@@ -9,11 +9,11 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-        Bicicleta bici = new Bicicleta("ASD", "a", "qweqwe", "a",20, 5);
-        Bicicleta bici1 = new Bicicleta("ASD", "b", "qweqwe", "a",20, 5);
-        Moto moto = new Moto("Ducatti", "Nuevo","c" ,"Bueno", false);
+        Bicicleta bici = new Bicicleta("RALY", "2023", "a", "montañera",20, 5);
+        Bicicleta bici1 = new Bicicleta("GW", "b", "b", "pista",20, 5);
+        Moto moto = new Moto("Ducatti", "2023","c" ,"1200", false);
         Carro carro = new Carro("Mazda", "CX-60","d", "Blanco");
-        Carro carro1 = new Carro("Mazda", "CX-60","e", "Blanco");
+        Carro carro1 = new Carro("Mazda", "CX-60","e", "Rojo");
 
 
 

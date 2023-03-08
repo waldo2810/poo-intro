@@ -16,7 +16,7 @@ public final class Moto extends Vehiculo{
 
     @Override
     public String toString(){
-        return super.toString() + "\nCilindraje: "+getCilindraje() +"\nPlaca: "+getPlaca() +"\nElectrica: "+esElectrica;
+        return super.toString() + "\nCilindraje: "+getCilindraje() +"\nElectrica: "+esElectrica;
     }
 
 
