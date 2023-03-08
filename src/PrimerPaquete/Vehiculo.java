@@ -18,7 +18,7 @@ public abstract class Vehiculo implements Acelerar,Frenar,iniciarMarcha{
 
     @Override
     public String toString(){
-        return "Información de "+getClass().getSimpleName()+ "\n\nMarca de "+getClass().getSimpleName()+": "+getMarca()+"\nModelo: "+getModelo();
+        return "Vehiculo: "+getClass().getSimpleName()+", "+getMarca();
     }
 
 }

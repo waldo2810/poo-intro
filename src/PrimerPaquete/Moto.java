@@ -10,9 +10,4 @@ public final class Moto extends Vehiculo{
         this.esElectrica = esElectrica;
     }
 
-    @Override
-    public String toString(){
-        return super.toString() + "Cilindraje: "+cilindraje + "\nElectrica: "+esElectrica;
-    }
-
 }

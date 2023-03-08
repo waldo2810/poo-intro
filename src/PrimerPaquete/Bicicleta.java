@@ -12,9 +12,4 @@ public final class Bicicleta extends Vehiculo {
         this.cambios = cambios;
     }
 
-    @Override
-    public String toString(){
-        return super.toString()+"\nTipo de llanta: "+tipoLlanta+"\nTamaño: "+tamanio+"\nCantidad de cambios: "+cambios;
-    }
-
 }

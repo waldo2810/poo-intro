@@ -2,10 +2,12 @@ import PrimerPaquete.Bicicleta;
 import PrimerPaquete.Moto;
 import PrimerPaquete.Vehiculo;
 
+import java.util.HashSet;
+
 public class Main {
 
     public static void main(String[] args) {
-        Bicicleta bici = new Bicicleta("ASD","QWE","QWE",20,5);
+        Bicicleta bici = new Bicicleta("Shimano","QWE","QWE",20,5);
         System.out.println(bici.toString());
         bici.iniciarMarcha();
         bici.acelerarVehiculo();
@@ -18,8 +20,17 @@ public class Main {
 
         System.out.print(suzuki.toString());
         System.out.println(honda.toString());
-            suzuki.acelerarVehiculo();
+        suzuki.acelerarVehiculo();
+
+        //HASHSET
+        HashSet<Vehiculo> vehiculoHashSet = new HashSet<>();
+        vehiculoHashSet.add(ducatti);
+        vehiculoHashSet.add(bici);
+
+        System.out.println("\nhashset: "+vehiculoHashSet);
+
         }
+
 
     }
 
