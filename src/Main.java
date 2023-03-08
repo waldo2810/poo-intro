@@ -1,43 +1,38 @@
 import PrimerPaquete.Bicicleta;
+import PrimerPaquete.Carro;
 import PrimerPaquete.Moto;
 import PrimerPaquete.Vehiculo;
 
-import java.util.HashSet;
+import java.util.Arrays;
+import java.util.HashMap;
 
 public class Main {
 
     public static void main(String[] args) {
-        Bicicleta bici = new Bicicleta("Shimano","QWE","QWE",20,5);
-        System.out.println(bici.toString());
-        bici.iniciarMarcha();
-        bici.acelerarVehiculo();
+        Bicicleta bici = new Bicicleta("ASD", "QWE", "QWE", "a",20, 5);
+        Moto moto = new Moto("Ducatti", "Nuevo","JKL-12D" ,"Bueno", false);
+        Carro carro = new Carro("Mazda", "CX-60","GWM-412", "Blanco");
 
-        Vehiculo suzuki = new Moto("Suzuki","Antiguo","1100", false);
-        Vehiculo honda = new Vehiculo("Honda","Nuevo"){
+        HashMap<Integer, Vehiculo> mapVehiculo = new HashMap<>();
+        HashMap<String, Vehiculo> maVehiculo = new HashMap<>();
 
-        };
-        Moto ducatti = new Moto("Ducatti","Ambiguo","1100", false);
+        maVehiculo.put(null, bici);
 
-        System.out.print(suzuki.toString());
-        System.out.println(honda.toString());
-        suzuki.acelerarVehiculo();
+        mapVehiculo.put(1, bici);
+        mapVehiculo.put(2, moto);
+        mapVehiculo.put(3, carro);
+        System.out.println(maVehiculo.get(null));
 
-        //HASHSET
-        HashSet<Vehiculo> vehiculoHashSet = new HashSet<>();
 
-        System.out.println("*---AGREGAR---*");
-        vehiculoHashSet.add(ducatti);
-        vehiculoHashSet.add(bici);
-        System.out.println("\nhashset: "+vehiculoHashSet);
-        System.out.println("Cantidad:: "+vehiculoHashSet.size());
 
-        System.out.println("*---ELIMINAR---*");
-        vehiculoHashSet.remove(ducatti);
-        System.out.println("\nhashset: "+vehiculoHashSet);
-        System.out.println("Cantidad:: "+vehiculoHashSet.size());
 
+        for(Vehiculo vehiculo : maVehiculo.values()){
+            System.out.println(vehiculo);
         }
 
 
+
     }
+
+}
 
