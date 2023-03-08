@@ -28,7 +28,7 @@ public abstract class Vehiculo implements Acelerar,Frenar,iniciarMarcha{
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (o == null) return false;
         Vehiculo vehiculo = (Vehiculo) o;
         return Objects.equals(marca, vehiculo.marca) && Objects.equals(placa, vehiculo.placa) && Objects.equals(modelo, vehiculo.modelo);
     }
