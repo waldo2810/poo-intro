@@ -39,7 +39,7 @@ public abstract class Vehiculo implements Acelerar,Frenar,iniciarMarcha,Comparab
 
     @Override
     public int compareTo(Vehiculo o) {
-        return this.getPlaca().compareTo(o.getPlaca());
+        return o.getPlaca().compareTo(this.getPlaca());
     }
 
 }
