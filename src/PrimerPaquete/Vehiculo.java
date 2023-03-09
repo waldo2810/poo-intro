@@ -6,23 +6,35 @@ public abstract class Vehiculo implements Acelerar,Frenar,iniciarMarcha,Comparab
     private final String placa;
     private final String modelo;
 
-    public Vehiculo(String marca, String modelo,String placa) {
+    private final Double precio;
+
+    public Vehiculo(String marca, String placa, String modelo, Double precio) {
         this.marca = marca;
-        this.modelo = modelo;
         this.placa = placa;
+        this.modelo = modelo;
+        this.precio = precio;
     }
 
-    public String getMarca(){
+    public String getMarca() {
         return marca;
     }
-    public String getModelo(){
+
+    public String getPlaca() {
+        return placa;
+    }
+
+    public String getModelo() {
         return modelo;
     }
-    public String getPlaca(){
-        return placa;}
+
+    public Double getPrecio() {
+        return precio;
+    }
+
     @Override
     public String toString(){
-        return "\nVehiculo: "+getClass().getSimpleName()+"\nMarca: "+getMarca()+"\nPlaca: "+getPlaca()+"\nModelo: "+getModelo();
+        return "\nVehiculo: "+getClass().getSimpleName()+"\nMarca: "+getMarca()+"\nPlaca: "+getPlaca()+
+                "\nModelo: "+getModelo()+"\nPrecio: "+getPrecio();
     }
 
     @Override

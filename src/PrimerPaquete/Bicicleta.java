@@ -5,8 +5,8 @@ public final class Bicicleta extends Vehiculo {
     private final int tamanio;
     private final int cambios;
 
-    public Bicicleta(String marca,String modelo,String placa, String tipoLlanta, int tamanio,int cambios){
-        super(marca, modelo, placa);
+    public Bicicleta(String marca, String placa, String modelo, Double precio, String tipoLlanta, int tamanio, int cambios) {
+        super(marca, placa, modelo, precio);
         this.tipoLlanta = tipoLlanta;
         this.tamanio = tamanio;
         this.cambios = cambios;

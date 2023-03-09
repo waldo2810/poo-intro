@@ -3,8 +3,8 @@ package PrimerPaquete;
 public final class Carro extends Vehiculo{
     private final String color;
 
-    public Carro(String marca, String modelo,String placa, String color){
-        super(marca,modelo,placa);
+    public Carro(String marca, String placa, String modelo, Double precio, String color) {
+        super(marca, placa, modelo, precio);
         this.color = color;
     }
 
