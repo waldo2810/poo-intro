@@ -9,30 +9,38 @@ import java.util.stream.Collectors;
 public class Main {
 
     public static void main(String[] args) {
-     List <Vehiculo> arrayVehiculos = new ArrayList();
-     Vehiculo carro = new Carro("MAzda","a-30","ABC-123","Rojo");
-     Vehiculo carro1 = new Carro("Ferrari","CX-40","DEF-456","Rojo");
-     Vehiculo carro2 = new Carro("Twingo","CX-50","GHI-789","Rojo");
-     Vehiculo carro3 = new Carro("Lamborghini","CX-60","JKL-321","Rojo");
-     Vehiculo carro4 = new Carro("Chevrolet","CX-70","MNO-654","Rojo");
-     Vehiculo carro5 = new Carro("BWM","CX-80","PQR-987","Rojo");
-     Vehiculo carro6 = new Carro("Jeep","CX-90","STU-102","Rojo");
+     List <Moto> arrayVehiculos = new ArrayList();
 
-        arrayVehiculos.add(carro);
-        arrayVehiculos.add(carro1);
-        arrayVehiculos.add(carro2);
-        arrayVehiculos.add(carro3);
-        arrayVehiculos.add(carro4);
-        arrayVehiculos.add(carro5);
-        arrayVehiculos.add(carro6);
+        Moto moto= new Moto("Suzuki","A","JDK-12D",220,false);
+        Moto moto1= new Moto("Honda","A","JDK-12D",100,false);
+        Moto moto2= new Moto("Ducatti","A","JDK-12D",53,false);
+        Moto moto3= new Moto("Boxer","A","JDK-12D",500,false);
+        Moto moto4= new Moto("N-MAX","A","JDK-12D",350,false);
+        Moto moto5= new Moto("AKT","A","JDK-12D",106,false);
+        Moto moto6= new Moto("PULSAR","A","JDK-12D",122,false);
 
-   List<Vehiculo>filtrada = filtrarList(arrayVehiculos,"A","A");
-   showInformation(filtrada);
+        arrayVehiculos.add(moto);
+        arrayVehiculos.add(moto1);
+        arrayVehiculos.add(moto2);
+        arrayVehiculos.add(moto3);
+        arrayVehiculos.add(moto4);
+        arrayVehiculos.add(moto5);
+        arrayVehiculos.add(moto6);
+
+        filtrarList(arrayVehiculos).forEach(System.out::println);
+
     }
 
-    public static List <Vehiculo>filtrarList(List<Vehiculo>s,String marca,String placa){
-        return s.stream().filter(x ->x.getPlaca().contains(placa) && x.getMarca().contains(marca)).collect(Collectors.toList());
+    /*
+    * Un metodo que retorne el vehiculo con mayor cilindraje.
+    * Un metodo que retorne el mapa con la marca y vehiculos asociados con esa marca.
+    * */
+
+
+    public static List <Vehiculo>filtrarList(List<Moto>s){
+        return s.stream().max((a1,a2) -> a1.getCilindraje() - a2.getCilindraje()).stream().collect(Collectors.toList());
     }
+
     public static void showInformation(List<?>filtrado ){
         filtrado.forEach(System.out::println);
     }

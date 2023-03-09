@@ -1,16 +1,16 @@
 package PrimerPaquete;
 
 public final class Moto extends Vehiculo{
-    private String cilindraje;
+    private int cilindraje;
     private boolean esElectrica;
 
-    public Moto(String marca, String modelo,String placa, String cilindraje ,boolean esElectrica) {
+    public Moto(String marca, String modelo,String placa, int cilindraje ,boolean esElectrica) {
         super(marca,modelo,placa);
         this.cilindraje = cilindraje;
         this.esElectrica = esElectrica;
     }
 
-    public String getCilindraje(){
+    public int getCilindraje(){
         return cilindraje;
     }
 
