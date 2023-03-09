@@ -10,7 +10,7 @@ public class Main {
 
     public static void main(String[] args) {
      List <Vehiculo> arrayVehiculos = new ArrayList();
-     Vehiculo carro = new Carro("Mazda","a-30","ABC-123","Rojo");
+     Vehiculo carro = new Carro("MAzda","a-30","ABC-123","Rojo");
      Vehiculo carro1 = new Carro("Ferrari","CX-40","DEF-456","Rojo");
      Vehiculo carro2 = new Carro("Twingo","CX-50","GHI-789","Rojo");
      Vehiculo carro3 = new Carro("Lamborghini","CX-60","JKL-321","Rojo");
@@ -26,9 +26,15 @@ public class Main {
         arrayVehiculos.add(carro5);
         arrayVehiculos.add(carro6);
 
-    List <Vehiculo> listaVehiculos = arrayVehiculos.stream().filter(x -> x.getMarca().contains("a") && x.getModelo().contains("a")).collect(Collectors.toList());
-    listaVehiculos.forEach(System.out::println);
+   List<Vehiculo>filtrada = filtrarList(arrayVehiculos,"A","A");
+   showInformation(filtrada);
+    }
 
+    public static List <Vehiculo>filtrarList(List<Vehiculo>s,String marca,String placa){
+        return s.stream().filter(x ->x.getPlaca().contains(placa) && x.getMarca().contains(marca)).collect(Collectors.toList());
+    }
+    public static void showInformation(List<?>filtrado ){
+        filtrado.forEach(System.out::println);
     }
 }
 
