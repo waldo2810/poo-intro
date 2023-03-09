@@ -59,7 +59,7 @@ public class Main {
 
         Long cantidad = filtar(arrayVehiculo,"Mazda");
         System.out.println("La Cantidad De Vehiculos Filtrados es: "+cantidad);
-        System.out.println("La Suma Del Precio De Todos Los Vehiculos Es De:"+sumaVehiculos(arrayVehiculo));
+        System.out.println("La Suma Del Precio De Todos Los Vehiculos Es De:"+sumwithreduce(arrayVehiculo));
 
 
     }
@@ -89,6 +89,10 @@ public class Main {
     }
     public static double sumaVehiculos(ArrayList<Vehiculo> a){
         double preciototal = a.stream().mapToDouble(Vehiculo -> Vehiculo.getPrecio()).sum();
+        return preciototal;
+    }
+    public static double sumwithreduce(ArrayList<Vehiculo> vehiculos){
+        double preciototal = vehiculos.stream().map(Vehiculo::getPrecio).reduce(0d, (a, b) -> a+b);
         return preciototal;
     }
 
