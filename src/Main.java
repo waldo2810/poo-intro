@@ -28,7 +28,7 @@ public class Main {
 
         Collections.sort(arrayVehiculo);
         arrayVehiculo.forEach(System.out::println);
-        System.out.println(carro1.compareTo(carro));
+        //System.out.println(carro1.compareTo(carro));
 
 
 
