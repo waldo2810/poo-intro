@@ -1,7 +1,4 @@
-import PrimerPaquete.Bicicleta;
-import PrimerPaquete.Carro;
-import PrimerPaquete.Moto;
-import PrimerPaquete.Vehiculo;
+import PrimerPaquete.*;
 import com.sun.jdi.Value;
 
 import java.util.*;
@@ -10,7 +7,7 @@ import java.util.stream.Stream;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         ArrayList<Vehiculo> arrayVehiculo = new ArrayList<>();
         List<Moto> arrayMoto = new ArrayList();
@@ -61,6 +58,13 @@ public class Main {
         System.out.println("***Prints Metodos Emily***");
 
         System.out.println(getMotoCilindraje(arrayMoto));
+
+        //MILLER QUINTERO
+        Thread usuario1 = new Proceso1(" "," ",0);
+        Thread usuario2 = new Proceso1(" "," ",0);
+
+        usuario1.start();
+        usuario2.start();
     }
 
     // Metodos Ismael *** Mesa Lado A***
@@ -120,5 +124,6 @@ public class Main {
     private static Stream<Vehiculo> getVehiculoStream(ArrayList<Vehiculo> vehiculos, String placa, String modelo) {
         return vehiculos.stream().filter(v -> v.getPlaca().contains(placa) && v.getModelo().contains(modelo));
     }
-    //MILLER QUINTERO
+
+
 }
